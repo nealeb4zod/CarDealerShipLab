@@ -24,7 +24,7 @@ public class ElectricCarTest {
         wheels =  new Wheels(4, WheelType.ALLOY);
         seats = new Seats(5, UpholsteryType.SYNTHETIC);
 
-        electricCar = new ElectricCar(engine, wheels, seats, 80);
+        electricCar = new ElectricCar(engine, wheels, seats, 15000.00,80);
     }
 
     @Test

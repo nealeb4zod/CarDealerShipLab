@@ -8,8 +8,8 @@ public class ElectricCar extends Vehicle{
 
     private int chargedPercentage;
 
-    public ElectricCar(Engine engine, Wheels wheels, Seats seats, int chargedPercentage) {
-        super(engine, wheels, seats);
+    public ElectricCar(Engine engine, Wheels wheels, Seats seats, double price, int chargedPercentage) {
+        super(engine, wheels, seats, price);
         this.chargedPercentage = chargedPercentage;
     }
 

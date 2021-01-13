@@ -25,7 +25,7 @@ public class HybridCarTest {
         wheels =  new Wheels(4, WheelType.ALLOY);
         seats = new Seats(5, UpholsteryType.SYNTHETIC);
 
-        hybridCar = new HybridCar(engine, wheels, seats, true);
+        hybridCar = new HybridCar(engine, wheels, seats, 20000.00,true);
     }
 
     @Test

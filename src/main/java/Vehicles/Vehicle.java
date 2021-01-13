@@ -9,11 +9,13 @@ public class Vehicle {
     private Engine engine;
     private Wheels wheels;
     private Seats seats;
+    private double price;
 
-    public Vehicle(Engine engine, Wheels wheels, Seats seats) {
+    public Vehicle(Engine engine, Wheels wheels, Seats seats, double price) {
         this.engine = engine;
         this.wheels = wheels;
         this.seats = seats;
+        this.price = price;
     }
 
     public Engine getEngine() {
@@ -26,5 +28,9 @@ public class Vehicle {
 
     public Seats getSeats() {
         return seats;
+    }
+
+    public double getPrice() {
+        return price;
     }
 }

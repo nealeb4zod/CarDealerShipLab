@@ -5,7 +5,7 @@ import Components.Seats;
 import Components.Wheels;
 
 public class Car extends Vehicle{
-    public Car(Engine engine, Wheels wheels, Seats seats) {
-        super(engine, wheels, seats);
+    public Car(Engine engine, Wheels wheels, Seats seats, double price) {
+        super(engine, wheels, seats, price);
     }
 }

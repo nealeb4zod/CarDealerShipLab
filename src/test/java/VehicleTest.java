@@ -25,7 +25,7 @@ public class VehicleTest {
         wheels = new Wheels(4, WheelType.ALLOY);
         seats = new Seats(5, UpholsteryType.LEATHER);
 
-        vehicle = new Vehicle(engine, wheels, seats);
+        vehicle = new Vehicle(engine, wheels, seats, 10000.00);
     }
 
     @Test
