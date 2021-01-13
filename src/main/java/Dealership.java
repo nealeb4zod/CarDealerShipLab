@@ -1,6 +1,5 @@
 import Behaviours.IBuyVehicle;
 import People.Customer;
-import Vehicles.Car;
 import Vehicles.Vehicle;
 
 import java.util.ArrayList;

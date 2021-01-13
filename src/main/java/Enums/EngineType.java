@@ -1,8 +1,10 @@
 package Enums;
 
 public enum EngineType {
-        DIESEL,
+
+    DIESEL,
     PETROL,
     ELECTRIC,
     HYBRID
+
 }
