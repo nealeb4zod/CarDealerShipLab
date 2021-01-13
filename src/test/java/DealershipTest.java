@@ -4,6 +4,7 @@ import Components.Wheels;
 import Enums.EngineType;
 import Enums.UpholsteryType;
 import Enums.WheelType;
+import People.Customer;
 import Vehicles.Car;
 import Vehicles.ElectricCar;
 import Vehicles.HybridCar;
@@ -13,8 +14,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class DealershipTest {
 
@@ -26,6 +26,7 @@ public class DealershipTest {
     Wheels wheels;
     Seats seats;
     ArrayList<Vehicle> carCollection;
+    Customer customer;
 
 
     @Before
@@ -40,6 +41,7 @@ public class DealershipTest {
         hybridCar = new HybridCar(engine, wheels, seats, 20000.00,false);
 
         dealership = new Dealership(200000000.00);
+        customer= new Customer("Bob", 10000000.00);
     }
 
     @Test
@@ -61,6 +63,18 @@ public class DealershipTest {
         assertEquals(199990000.00, dealership.getTill(), 0.01);
         assertTrue(dealership.getCarCollection().contains(car));
     }
+
+    @Test
+    public void canSellVehicle() {
+        dealership.addVehicle(car);
+        dealership.addVehicle(hybridCar);
+        dealership.addVehicle(electricCar);
+        dealership.sellVehicle(car, customer);
+        assertEquals(200010000.00, dealership.getTill(), 0.01);
+        assertFalse(dealership.getCarCollection().contains(car));
+    }
+
+
 
 
 
